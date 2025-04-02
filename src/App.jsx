@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import { Navigation } from "./components/Navigation";
-import { Home } from "./pages/home";
-import { Owner } from "./pages/owner";
-import { User } from "./pages/user";
-import { Admin } from "./pages/admin";
+import { Home } from "./pages/Home";
+import { Owner } from "./pages/Owner";
+import { User } from "./pages/User";
+import { Admin } from "./pages/Admin";
 
 const router = createBrowserRouter([
   {
