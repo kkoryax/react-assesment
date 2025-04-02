@@ -7,22 +7,22 @@ export function AxiosFetchDeleteData() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(
-                    "https://jsd5-mock-backend.onrender.com/members"
-                );
-                setData(response.data)
-            } catch (err) {
-                setError("Failed to fetch users");
-                console.error(err)
-            } finally {
-                setLoading(false);
-            }
-        }
-
         fetchData()
     },[]);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(
+                "https://jsd5-mock-backend.onrender.com/members"
+            );
+            setData(response.data)
+        } catch (err) {
+            setError("Failed to fetch users");
+            console.error(err)
+        } finally {
+            setLoading(false);
+        }
+    }
 
     const DeleteData = async (memberId) => {
         setLoading(true);
@@ -30,16 +30,14 @@ export function AxiosFetchDeleteData() {
         setData(null);
 
         try {
-            const res = await axios.delete(
-                `https://jsd5-mock-backend.onrender.com/members/${memberId}`
+            await axios.delete(
+                `https://jsd5-mock-backend.onrender.com/member/${memberId}`
             );
-            setData(res.data);
-        } catch (err) {
-            setError("Failed to delete users");
-            console.error(err)
+            fetchData()
         } finally {
             setLoading(false);
         }
+
     }
 
     return (

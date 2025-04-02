@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <Navigation />,
     errorElement: (
       <div className="min-h-screen flex justify-center items-center">
-        <h1 className="text-4xl">404 - Page Not Found 🧙‍♂️</h1>
+        <h1 className="text-4xl">404 - Page Not Found 😭🙏</h1>
       </div>
     ),
     children: [
