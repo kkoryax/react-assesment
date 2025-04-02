@@ -26,27 +26,29 @@ export function AxiosFetchData() {
 
     return (
         <div className="flex flex-col items-center min-h-screen w-full bg-[#393646] p-6">
-            {loading && <p className="center">Loading . . .</p>}
-            {error && <p className="center">{error}</p>}
+            {loading && <p className="center text-5xl text-white font-bold">Loading . . .</p>}
+            {error && <p className="center text-5xl text-white font-bold">{error}</p>}
 
+            {!loading && !error &&
             <table className="w-full">
-                    <thead className="bg-[#F4EEE0]">
-                        <tr>
-                            <th className="border p-2">First Name</th>
-                            <th className="border p-2">Last Name</th>
-                            <th className="border p-2">Position</th>
+                <thead className="bg-[#F4EEE0]">
+                    <tr>
+                        <th className="border p-2">First Name</th>
+                        <th className="border p-2">Last Name</th>
+                        <th className="border p-2">Position</th>
+                    </tr>
+                </thead>
+                <tbody className="bg-white">
+                    {data.map((member) => (
+                        <tr key={member.id}>
+                            <td className="border p-2">{member.name}</td>
+                            <td className="border p-2">{member.lastname}</td>
+                            <td className="border p-2">{member.position}</td>
                         </tr>
-                    </thead>
-                    <tbody className="bg-white">
-                        {data.map((member) => (
-                            <tr key={member.id}>
-                                <td className="border p-2">{member.name}</td>
-                                <td className="border p-2">{member.lastname}</td>
-                                <td className="border p-2">{member.position}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                    ))}
+                </tbody>
+            </table>
+            }
         </div>
     );
 }

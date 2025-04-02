@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { AxiosFetchData } from "../components/AxiosFetchData";
 import { AxiosPostData } from "../components/AxiosPostData";
+import { AxiosFetchDeleteData } from "../components/AxiosFetch-DeleteData";
 
 export function Admin() {
     return (
@@ -22,7 +22,7 @@ export function Admin() {
                 </Link>
             </section>
             <AxiosPostData />
-            <AxiosFetchData />
+            <AxiosFetchDeleteData />
         </div>
     );
 }
