@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AxiosFetchData } from "../components/AxiosFetchData";
 
 export function User() {
     return (
@@ -19,18 +20,7 @@ export function User() {
                     Admin Home Sector
                 </Link>
             </section>
-            <table className="flex flex-col justify-center items-center w-150 bg-[#F4EEE0]">
-                <tr className="flex flex-row w-full justify-evenly">
-                    <th className="outline-2 p-2 w-full">First Name</th>
-                    <th className="outline-2 p-2 w-full">Last Name</th>
-                    <th className="outline-2 p-2 w-full">Position</th>
-                </tr>
-                <tr className="flex flex-row w-full justify-evenly">
-                    <td className="outline-2 p-2 w-full">Alfreds Futterkiste</td>
-                    <td className="outline-2 p-2 w-full">Maria Anders</td>
-                    <td className="outline-2 p-2 w-full">Germany</td>
-                </tr>
-            </table>
+            <AxiosFetchData />
         </div>
     );
 }
