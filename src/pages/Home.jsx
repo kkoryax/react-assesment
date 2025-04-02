@@ -8,12 +8,12 @@ export function Home() {
                 <h2 className="text-3xl text-white font-bold">React - Assessment</h2>
             </section>
             <section className="flex flex-row justify-center items-center gap-12">
-                <Link to="/owner"
+                <Link to="/user"
                 className="font-semibold text-lg px-4 py-2 rounded-2xl bg-[#F4EEE0] hover:cursor-pointer"
                 >
                     User Home Sector
                 </Link>
-                <Link to="/owner"
+                <Link to="/admin"
                 className="font-semibold text-lg px-4 py-2 rounded-2xl bg-[#F4EEE0] hover:cursor-pointer"
                 >
                     Admin Home Sector
