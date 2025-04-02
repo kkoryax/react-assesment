@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { AxiosFetchData } from "../components/AxiosFetchData";
+import { AxiosPostData } from "../components/AxiosPostData";
 
 export function Admin() {
     return (
@@ -20,25 +21,7 @@ export function Admin() {
                     Admin Home Sector
                 </Link>
             </section>
-            <section className="flex flex-col justify-center items-start gap-4">
-                <h2 className="text-2xl text-white font-bold">Create User Here</h2>
-                <div className="flex flex-row gap-8">
-                    <input type="text" placeholder="First Name"
-                    className="bg-white px-4 py-2"
-                    />
-                    <input type="text" placeholder="Last Name"
-                    className="bg-white px-4 py-2"
-                    />
-                    <input type="text" placeholder="Position"
-                    className="bg-white px-4 py-2"
-                    />
-                    <button
-                    className="p-4 rounded-xl bg-blue-400 hover:cursor-pointer"
-                    >
-                        Save
-                    </button>
-                </div>
-            </section>
+            <AxiosPostData />
             <AxiosFetchData />
         </div>
     );
