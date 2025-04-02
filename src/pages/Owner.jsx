@@ -1,3 +1,5 @@
+import imagePlaceholder from "/src/assets/image-placeholder.jpg"
+
 export function Owner() {
     return (
         <div className="flex flex-col w-full h-full pt-16 items-center gap-16 bg-[#393646]">
@@ -7,7 +9,7 @@ export function Owner() {
             </section>
             <section className="flex flex-col justify-center items-center gap-12">
                 <img
-                src="/src/assets/image-placeholder.jpg" alt=""
+                src={imagePlaceholder} alt=""
                 className="h-96"
                 />
                 <div className="flex flex-col justify-center items-center gap-4">
